@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Serial No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of empData">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ item.phone }}</td>
+                <td>
+                    <div>
+                        <a routerLink="/update-employee/{{item.id}}" class="btn btn-warning btn-xs">Edit</a>
+                        <a routerLink="/show-employee" class="btn btn-danger btn-xs" (click)="deleteData(item.id)">Delete</a>
+
+                    </div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
