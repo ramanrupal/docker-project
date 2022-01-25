@@ -1,5 +1,6 @@
 # docker-project
 
+<b> Angular </b>
 angular app url: localhost
 
 used nginx as conatiner for web server..
@@ -12,7 +13,7 @@ simply change url in data.service.ts: which wil be pointing to node-js server al
 
 ########################################################################################################
 
-mysqld:
+<b>mysqld</b>
 
 to create a table in mysql container within mydb database
 
