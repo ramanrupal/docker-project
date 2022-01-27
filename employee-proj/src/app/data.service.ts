@@ -6,7 +6,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-   url="http://localhost/employee";
+   url="http://0.0.0.0/employee";
    httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
   };

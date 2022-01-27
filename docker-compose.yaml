@@ -14,7 +14,7 @@ services:
         node-backend:
                  depends_on:
                          - mysql-db
-                 image: dev:0.4
+                 image: ramanrupal/node-app:0.1
                  container_name: node_app_cont
                  environment:
                          # - MYSQL_HOSTNAME=mysql_app_cont
@@ -24,10 +24,13 @@ services:
                          - MYSQL_PASSWORD=raman
 
         angular-frontend:
-                image: frontend:0.1
+                image: ramanrupal/angular-app:0.2
                 container_name: angular_app_cont
                 ports: 
                          - 80:80
+                depends_on:
+                        - mysql-db
+                        - node-backend
 
 volumes:
         db:
